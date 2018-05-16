@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">BETA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+ 	<div class="gobreadcrumb" style="margin-top: 20px">
+
+ 		<ol >
+ 			<li class="" style="float: left;"><a href="home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li class="" style="float: left;"><a href="">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li>Add applicant details</li>
+ 		</ol>
+ 		
+ 	</div>
+
+ 	<div style="clear: left;"></div>
+    <div style="clear: left;"></div>
+
+      <h1 class="heading-large">
+        Application to change the register
+      </h1>
+
+      <hr>
+
+		<h2 class="heading-medium">Add applicant details</h2>
+
+<div class="form-group">
+  <fieldset>
+
+    <div class="multiple-choice" data-target="contact-by-email">
+      <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+      <label for="example-contact-by-email">A private indvidual</label>
+    </div>
+    <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
+      <label class="form-label" for="contact-email">Name(s) of applicant</label>
+      <input class="form-control" name="contact-email" type="text" id="contact-email">
+    </div>
+
+    <div class="multiple-choice" data-target="contact-by-phone">
+      <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+      <label for="example-contact-by-phone">A UK incorporated company or limited liability partnership</label>
+    </div>
+    <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+      <label class="form-label" for="contact-phone">
+        Registered number
+        <span class="form-hint">
+          Include any prefix
+        </span>
+      </label>
+      <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+    </div>
+
+    <div class="multiple-choice" data-target="contact-by-text">
+      <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+      <label for="example-contact-by-text">An overseas company</label>
+    </div>
+    <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+      <label class="form-label" for="contact-text">Territory of incorporation</label>
+      <input class="form-control" name="contact-text" type="text" id="contact-text">
+      <label class="form-label" for="contact-text">
+        Registered number
+        <span class="form-hint">
+          Include any prefix
+        </span>
+      </label>
+      <input class="form-control" name="contact-text" type="text" id="contact-text">
+    </div>
+
+
+  </fieldset>
+</div>
+
+<h2 class="heading-small" style="margin-top: -15px; margin-bottom: 10px;">Service address for the applicant</h2>
+
+    <p>
+      The applicant must provide a postal address. They can also provide up to two further addresses, which can be the combination of a postal address, UK DX box number or email address.
+    </p>
+
+<div class="form-group">
+  <fieldset>
+
+    <div class="multiple-choice">
+      <input id="nationalities-british" name="nationalities" type="checkbox" value="British">
+      <label for="nationalities-british">The address of the property - where this is a single postal address</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="nationalities-irish" name="nationalities" type="checkbox" value="Irish">
+      <label for="nationalities-irish">The current address(es) for service in the register - for proprieters remaining in the register</label>
+    </div>
+    <div class="multiple-choice" data-target="example-different-country">
+      <input id="nationalities-other" name="nationalities" type="checkbox" value="Citizen of a different country">
+      <label for="nationalities-other">Add a different address(es)</label>
+    </div>
+    <div class="panel panel-border-narrow js-hidden" id="example-different-country">
+      <label class="form-label" for="nationalities-other-country"></label>
+      <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+    </div>
+
+  </fieldset>
+</div>
+
+<a href="/review-application-and-applicant">
+<input class="button" type="submit" value="Save and continue"> 
+</a>     
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

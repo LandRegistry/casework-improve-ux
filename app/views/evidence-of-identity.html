@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+ 	<div class="breadcrumb" style="margin-top: 20px">
+
+ 		<ol >
+ 			<li class="" style="float: left;"><a href="">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li class="" style="float: left;"><a href="">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li>Evidence of identity</li>
+ 		</ol>
+ 		
+ 	</div>
+
+ 	<div style="clear: left;"></div>
+  <div style="clear: left;"></div>
+
+  <h1 class="heading-large">
+    Application to change the register
+  </h1>
+
+  <hr>
+
+	<h2 class="heading-medium">Evidence of identity</h2>
+
+    <p>Where any transferor, transferee, landlord, tenant, borrower or lender is not represented by a conveyancer, you need to provide confirmation of their identity.</p>
+
+<div class="form-group">
+  <fieldset>
+    <div class="multiple-choice">
+      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+      <label for="radio-1">I confirm that I am satisfied that sufficient steps have been taken to verity the identity of Mr Smith and that they are the registered proprieter or have the right to be the registered proprieter</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+      <label for="radio-2">I enclose evidence of identity in respect of Mr Smith, for whom I have not provided the confirmation above</label>
+    </div>
+
+  </fieldset>
+</div>
+
+
+<a href="/review-all">
+<input class="button" type="submit" value="Save and continue">      
+</a>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

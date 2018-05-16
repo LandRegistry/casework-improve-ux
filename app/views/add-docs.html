@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: white;
+  background-color: gray;
+  padding: 5px 15px;
+  border-radius: 0px;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+</style>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">BETA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+ 	<div class="gobreadcrumb" style="margin-top: 20px">
+
+ 		<ol >
+ 			<li class="" style="float: left;"><a href="home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li class="" style="float: left;"><a href="">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li>Upload documents</li>
+ 		</ol>
+ 		
+ 	</div>
+
+ 	<div style="clear: left;"></div>
+    <div style="clear: left;"></div>
+
+      <h1 class="heading-large">
+        Application to change the register
+      </h1>
+
+      <hr>
+
+<h2 class="heading-medium">Documents lodged with this application</h2>
+
+<p>We only need certified copies of deeds or documents. Once we have made a copy of the documents you send to us, they will be destroyed. This applies to both originals and certified copies.</p> 
+
+ <div class="upload-btn-wrapper">
+  <button onclick="myFunction()" class="btn" for="file-input">Upload a file</button>
+</div>
+
+<p id="demo" style="margin-top: 10px; margin-bottom: 10px;"></p>
+
+<div class="form-group">
+  <fieldset>
+
+    <legend style="margin-bottom: 10px;">
+      <h2 class="heading-small">Certification</h2>
+    </legend>
+
+    <div class="multiple-choice">
+      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+      <label for="radio-1">I/We certify this attachment is a true copy of the original document</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+      <label for="radio-2">I/We certify this attachment is a true copy of a document which is certified by a conveyancer to be a true copy of the original</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+      <label for="radio-3">This attachment is an uncertified copy</label>
+    </div>
+
+  </fieldset>
+</div>
+
+<a href="/review-all">
+<input class="button" type="submit" value="Save and continue">      
+</a>
+
+    </div>
+  </div>
+</main>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Transfer of part.pdf";
+}
+</script>
+
+{% endblock %}
+
+

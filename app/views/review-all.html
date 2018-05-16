@@ -1,0 +1,184 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: white;
+  background-color: gray;
+  padding: 5px 15px;
+  border-radius: 0px;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+</style>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">BETA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+ 	<div class="gobreadcrumb" style="margin-top: 20px">
+
+ 		<ol >
+ 			<li class="" style="float: left;"><a href="/home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li class="" style="float: left;"><a href="">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li>Review your application</li>
+ 		</ol>
+ 		
+ 	</div>
+
+ 	<div style="clear: left;"></div>
+    <div style="clear: left;"></div>
+
+      <h1 class="heading-large">
+        Application to change the register
+      </h1>
+
+      <hr>
+
+		<h2 class="heading-medium">Review your application</h2>
+
+<div style="background-color: #e6e6e6; height: 40px;">
+  <h2 class="heading-small" style="padding-top: 10px; padding-left: 5px;">Application</h2>
+</div>  
+
+<table>
+  <tbody>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Application type</td>
+      <td style="font-size: medium;">Transfer</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Application applies to</td>
+      <td style="font-size: medium;">Part of the title</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Which part of the title</td>
+      <td style="font-size: medium;">The part edged red on the plan</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Value or price paid</td>
+      <td style="font-size: medium;">£125,000</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Fees paid</td>
+      <td style="font-size: medium;">£40.00</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin-top: 40px"></div>
+
+<div style="background-color: #e6e6e6; height: 40px;">
+  <h2 class="heading-small" style="padding-top: 10px; padding-left: 5px;">Applicant</h2>
+</div>
+<table>
+  <tbody>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Applicant's name</td>
+      <td style="font-size: medium;">A Name</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Applicant's type</td>
+      <td style="font-size: medium;">A private individual</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Applicant's service address</td>
+      <td style="font-size: medium;">8 Some Street, Some Place, PL1 1AA</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Applicant represented by</td>
+      <td style="font-size: medium;">Acme Conveyancers Ltd</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin-top: 40px"></div>
+
+<div style="background-color: #e6e6e6; height: 40px;">
+  <h2 class="heading-small" style="padding-top: 10px; padding-left: 5px;">Documents lodged with this application</h2>
+</div>
+<table>
+  <tbody>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Document name</td>
+      <td style="font-size: medium;">Transfer of part.pdf</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2 class="heading-medium">Send your application</h2>
+
+<p>By submitting this application you're confirming that, to the best of your knowledge, the details you're providing are correct.</p>
+
+<div class="form-group" style="float: left; margin-top: 10px;">
+  <a href="/receipt ">
+    <input class="button" type="submit" value="Submit and continue">      
+  </a>
+
+  <div class="upload-btn-wrapper">
+    <a href="/save-as-draft">
+      <button onclick="myFunction()" class="btn" for="file-input">
+        Save as a draft
+      </button>
+    </a>
+  </div>
+
+</div>
+
+<div style="clear: left;"></div>
+
+<!--div style="margin-top: 30px;">
+<a href="/receipt ">
+<input class="button" type="submit" value="Save and continue">      
+</a>
+</div-->
+
+</div>
+
+</div>
+
+  </div>
+</main>
+
+{% endblock %}
+
+

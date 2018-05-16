@@ -1,0 +1,139 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  Example without branding
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="https://www.gov.uk">Home</a></li>
+      <li><a href="">Section</a></li>
+      <li>Subsection</li>
+    </ol>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        Application to change the register
+      </h1>
+
+      <h2 class="heading-medium">
+        Add an application
+      </h2>
+
+      <form>
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h2 class="heading-medium">Application type</h2>
+            </legend>
+
+            <div class="multiple-choice" data-target="do-by-transfer">
+              <input id="example-do-by-transfer" type="radio" name="radio-contact-group" value="No">
+              <label for="example-do-by-transfer">Transfer</label>
+            </div>
+
+            <div class="multiple-choice" data-target="contact-by-phone">
+              <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-phone">Charge</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+              <label class="form-label" for="contact-phone">MD reference (if known)</label>
+              <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+              <label class="form-label" for="contact-phone">Lender name</label>
+              <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+            </div>
+
+            <div class="multiple-choice" data-target="contact-by-text">
+              <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-text">Other</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-text">
+              <label class="form-label" for="contact-text-message">Enter the type of application</label>
+              <input class="form-control" name="contact-text-message" type="text" id="contact-text-message">
+            </div>
+
+          </fieldset>
+        </div>
+      </form>
+
+      <form>
+        <div class="form-group">
+          <fieldset>
+
+            <legend>
+              <h2 class="heading-medium">This application affects</h2>
+            </legend>
+
+            <div class="multiple-choice" data-target="do-by-transfer">
+              <input id="example-do-by-transfer" type="radio" name="radio-contact-group" value="No">
+              <label for="example-do-by-transfer">The whole of the registered title(s)</label>
+            </div>
+
+            <div class="multiple-choice" data-target="contact-by-phone">
+              <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+              <label for="example-contact-by-phone">Part of the title(s)</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+              <label class="form-label" for="contact-phone">Describe the part affected</label>
+              <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+            </div>
+
+          </fieldset>
+        </div>
+      </form>
+
+      <div class="">
+        <label class="form-label" for="value-or-price">
+          Value or price paid
+          <br>
+          <span class="form-hint">
+            Enter the amount in pounds sterling - for amounts in other currencies, provide the equivalent value
+          </span>
+        </label>
+        <input class="form-control" id="value-or-price" type="text" name="value-or-price">
+      </div>
+
+      <div class="">
+        <label class="form-label" for="fees-paid">
+          Fees paid
+          <br>
+          <span class="form-hint">
+            Enter the amount in pounds sterling - for amounts in other currencies, provide the equivalent value
+          </span>
+        </label>
+        <input class="form-control" id="fees-paid" type="text" name="fees-paid">
+      </div>
+
+    </div>
+
+      <input class="button" type="submit" value="Save and continue">
+
+    <!--div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Subsection</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="#">Related link</a></li>
+            <li><a href="#">Related link</a></li>
+            <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div-->
+  </div>
+
+</main>
+
+{% endblock %}

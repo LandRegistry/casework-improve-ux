@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: white;
+  background-color: gray;
+  padding: 5px 15px;
+  border-radius: 0px;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+</style>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+  <div class="phase-banner">
+  <p>
+    <strong class="phase-tag">BETA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+ 	<div class="gobreadcrumb" style="margin-top: 20px">
+
+ 		<ol >
+ 			<li class="" style="float: left;"><a href="home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li class="" style="float: left;"><a href="">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li>Title number</li>
+ 		</ol>
+ 		
+ 	</div>
+
+ 	<div style="clear: left;"></div>
+    <div style="clear: left;"></div>
+
+      <h1 class="heading-large">
+        Application to change the register
+      </h1>
+
+      <hr>
+
+		<h2 class="heading-medium">Add title number</h2>
+
+<div class="form-group" style="float: left;">
+  <label class="form-label" for="full-name-f1">Title number</label>
+  <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+
+
+  <div class="upload-btn-wrapper">
+    <button onclick="myFunction()" class="btn" for="file-input">
+      Submit
+    </button>
+  </div>
+
+</div>
+
+<div style="clear: left;"></div>
+
+<p id="demo" style="margin-bottom: 30px;"></p>
+
+<div class="" style="margin-top: 0px;">
+<a href="/add-application-dropdown2">
+<input class="button" type="submit" value="Save and continue">      
+</a>
+</div>
+
+    </div>
+  </div>
+</main>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "8 Some Street <br> Some Town <br> PL1 1AA";
+}
+</script>
+
+{% endblock %}
+
+

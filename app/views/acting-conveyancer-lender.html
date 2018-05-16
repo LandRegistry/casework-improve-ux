@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+ 	<div class="gobreadcrumb" style="margin-top: 20px">
+
+ 		<ol >
+ 			<li class="" style="float: left;"><a href="">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li class="" style="float: left;"><a href="">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li>Conveyancer acting</li>
+ 		</ol>
+ 		
+ 	</div>
+
+ 	<div style="clear: left;"></div>
+    <div style="clear: left;"></div>
+
+      <h1 class="heading-large">
+        Application to change the register
+      </h1>
+
+      <hr>
+
+		<h2 class="heading-medium">Details of conveyancer acting</h2>
+
+    <p>If you are sending an application to register a transfer, lease or charge, you must include details of the conveyancer (if any) who represented them.</p>
+      
+      <div class="form-group" style="margin-top: -20px;">
+        <fieldset>
+
+          <legend>
+            <h1 class="heading-small" style="margin-bottom: 15px;">
+              Who is the lender represented by?
+            </h1>
+          </legend>
+
+          <div class="multiple-choice" data-target="contact-by-email">
+            <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes" checked="checked">
+            <label for="example-contact-by-email"> Acme Conveyancers Ltd</label>
+          </div>
+
+          <div class="multiple-choice" data-target="contact-by-phone">
+            <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
+            <label for="example-contact-by-phone">A different conveyancer</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
+            <label class="form-label" for="contact-phone">Conveyancer's name</label>
+            <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+      
+            <label class="form-label" for="textarea">
+              Conveyancer's address
+            </label>
+            <textarea class="form-control form-control-3-4" name="textarea" id="textarea" rows="5"></textarea>
+
+            <label class="form-label" for="contact-phone">Conveyancer's reference (optional)</label>
+            <input class="form-control" name="contact-phone" type="text" id="contact-phone">
+          </div>
+
+          <div class="multiple-choice" data-target="contact-by-text">
+            <input id="example-contact-by-text" type="radio" name="radio-contact-group" value="No">
+            <label for="example-contact-by-text">They're not represented by a conveyancer</label>
+          </div>
+
+        </fieldset>
+      </div>
+
+  </div>
+</div>
+
+<div style="margin-top: 20px;">
+<a href="/service-address">
+<input class="button" type="submit" value="Save and continue">      
+</a>
+</div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

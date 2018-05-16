@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+
+  <link rel="stylesheet" type="text/css" href="/public/css/accessible-autocomplete.min.css">
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">BETA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+ 	<div class="gobreadcrumb" style="margin-top: 20px">
+
+ 		<ol >
+ 			<li class="" style="float: left;"><a href="">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li class="" style="float: left;"><a href="">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li>Add an application</li>
+ 		</ol>
+ 		
+ 	</div>
+
+ 	<div style="clear: left;"></div>
+  <div style="clear: left;"></div>
+
+      <h1 class="heading-large">
+        Application to change the register
+      </h1>
+
+      <hr>
+
+		<h2 class="heading-medium">Add an application</h2>
+
+    <div class="form-group">
+  <label class="form-label" for="select-box" style="font-weight: bold; font-size: 14pt;">Choose an application</label>
+  <select class="form-control" id="select-box" name="select-box" onchange="admSelectCheck(this);">
+    <option value=""></option>
+                  <option id="chargeOption" value="1">Charge</option>
+                  <option value="2">Discharge</option>
+                  <option value="3">Transfer</option>
+                  <option value="" disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;</option>
+                  <option value="4">Agreed notice</option>
+                  <option value="4">Amalgamation</option>
+                  <option value="4">Assent</option>
+                  <option value="4">Change of address</option>
+                  <option value="4">Change of name</option>
+                  <option value="4">Change property description</option>
+                  <option value="4">Death of joint proprietor</option>
+                  <option value="4">Deed of grant</option>
+                  <option value="4">Merge lease</option>
+                  <option value="4">Noting of easement</option>
+                  <option value="4">Noting of lease</option>
+                  <option value="4">Postponement of charge</option>
+                  <option value="4">Severance of joint tenancy</option>
+                  <option value="4">Statutory vesting</option>
+                  <option value="4">Variation of lease</option>
+  </select>
+</div>
+
+<div id="chargeDiv" style="display: none;">
+  <div class="form-group">
+    <label class="form-label" for="full-name-f1">MD reference (if known)</label>
+    <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="full-name-f1">Lender name</label>
+    <input class="form-control" id="full-name-f1" type="text" name="full-name-f1">
+  </div>
+</div>
+
+<div style="margin-top: 30px;">
+<a href="/review-application-copy2">
+<input class="button" type="submit" value="Save and continue"> 
+</a> 
+</div>    
+
+</div>
+
+</div>
+
+</main>
+
+{% endblock %}
+
+{% block page_scripts %}
+
+<script>
+  function admSelectCheck(nameSelect)
+{
+    if(nameSelect){
+        admOptionValue = document.getElementById("chargeOption").value;
+        if(admOptionValue == nameSelect.value){
+            document.getElementById("chargeDiv").style.display = "block";
+        }
+        else{
+            document.getElementById("chargeDiv").style.display = "none";
+        }
+    }
+    else{
+        document.getElementById("chargeDiv").style.display = "none";
+    }
+}
+</script>
+  <!--script src="/public/javascripts/accessible-autocomplete.min.js"></script>
+
+  <script>
+    accessibleAutocomplete.enhanceSelectElement({
+      selectElement: document.querySelector('#application-type')
+    })
+  </script-->
+
+{% endblock %}
+
+

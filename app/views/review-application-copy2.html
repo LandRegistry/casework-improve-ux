@@ -1,0 +1,191 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">BETA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+ 	  <div class="gobreadcrumb" style="margin-top: 20px">
+
+    <ol >
+      <li class="" style="float: left;"><a href="home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+      <li class="" style="float: left;"><a href="">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+      <li>Review application</li>
+    </ol>
+    
+  </div>
+
+  <div style="clear: left;"></div>
+    <div style="clear: left;"></div>
+
+      <h1 class="heading-large">
+        Application to change the register
+      </h1>
+
+      <hr>
+
+		<h2 class="heading-medium">Review application</h2>
+
+    <p>Remember, restrictions in deeds may apply to other deeds of lower priority, unless you specify otherwise.</p>
+
+  <ul id="sortable">
+
+  <table>
+    <thead>
+      <tr>
+        <th style="font-size: medium; text-align: left;">Priority</th>
+        <th style="font-size: medium; text-align: left;">Application type</th>
+        <th style="font-size: medium; text-align: left;">Value or price paid</th>
+        <th style="font-size: medium; text-align: left;">Fees paid</th>
+        <th ></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+  </table>
+
+  <div class="">
+      <table>
+        <tbody>
+          <tr>
+            <td scope="row" style="margin: 0; padding: 0; text-align: left;"><input type="text"/><!--span style="font-size: 16pt; color: gray;">&#9776;</span--></td>
+            <td class="row">Transfer</td>
+            <td class="numeric" style="text-align: right;">£125,000</td>
+            <td class="numeric" style="text-align: right;">£40.00</td>
+            <td class="row" style="text-align: right;"><a href="">Change</a></td>
+            <td><span style="font-size: 16pt; color: gray; text-align: right;">&#9776;</span></td> 
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  <div class="">
+      <table>
+        <tbody>
+          <tr>
+            <td scope="row"  style="margin: 0; padding: 0; text-align: left;"><input type="text"/><!--span style="font-size: 16pt; color: gray;">&#9776;</span--></td>
+            <td class="row">Charge</td>
+            <td class="numeric" style="">£125,000</td>
+            <td class="numeric" style="">£40.00</td>
+            <td class="row" style="text-align: right;"><a href="">Change</a></td>
+            <td><span style="font-size: 16pt; color: gray; text-align: right;">&#9776;</span></td>
+          </tr>
+        </tbody>
+      </table>
+  <!--/div-->
+  <!--/table-->
+  </div>
+    
+  </ul>
+
+<h2 class="heading-small" style="margin-top: 30px; margin-bottom: 20px;">Do you want to add another application?</h2>
+
+<div class="form-group">
+  <fieldset>
+
+    <div class="multiple-choice">
+      <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands" checked="checked">
+      <label for="radio-2">No</label>
+    </div>
+
+    <div class="multiple-choice">
+      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+      <label for="radio-1">Yes</label>
+    </div>
+
+  </fieldset>
+</div>
+
+<div class="" style="margin-top: 30px;">
+<a href="/add-applicant-details">
+<input class="button" type="submit" value="Save and continue">      
+</a>
+</div>
+
+</div>
+</div>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-1.5.2.js"></script>
+<script src="https://code.jquery.com/ui/1.8.9/jquery-ui.js"></script>
+
+<style>
+
+li span {
+  cursor: move;
+}
+
+input[type="text"] {
+  width: 12px;
+  margin-right: 30px;
+  text-align: left;
+  border: none;
+  color: black;
+  text-align: center;
+}
+</style>
+
+<script>
+
+
+sort_ul = $('#sortable');
+itemsCount = $('#sortable tr').length;
+
+function updateIndexes(){
+    $('tr input').each(function(i){
+              $(this).val(i+1);
+          });
+}
+
+updateIndexes();
+         
+sort_ul.sortable({handle:'span',
+                  stop:function(event,ui){ updateIndexes(); }
+});
+
+$('tr input').keyup(function(event) {
+  if(event.keyCode == '13'){      
+    event.preventDefault();
+      
+    order = parseInt($(this).val());
+      
+    tr = $(this).parent();
+    if(order>=1 && order <= itemsCount){      
+        
+        tr.effect('drop', function(){
+            tr.detach();
+                
+            if(order == itemsCount)
+                sort_ul.append(tr);
+            else
+                tr.insertBefore($('#sortable tr:eq('+(order-1)+')'));
+            
+            updateIndexes();
+            tr.effect('slide');
+        });
+    }else{
+        tr.effect('highlight');
+    }
+  }    
+});
+
+</script>
+
+{% endblock %}
+
+
