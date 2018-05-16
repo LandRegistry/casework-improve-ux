@@ -10,52 +10,60 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        AP1 prototype
+      {% include "includes/phase_banner.html" %}
+
+      <div class="gobreadcrumb" style="margin-top: 20px">
+
+        <ol >
+          <li class="" style="float: left;"><a href="/home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+          <li class="" style="float: left;"><a href="/index">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+          <li>Type of registration</li>
+        </ol>
+      
+   	</div>
+
+ 	<div style="clear: left;"></div>
+    <div style="clear: left;"></div>
+
+      <h1 class="heading-large">
+        Application to change the register
       </h1>
 
-			<h2 class="heading-medium">Test 1</h2>
+      <hr>
 
-			<ul class="list list-bullet">
-				<li><a href="/interstitial">Interstitial</a></li>
-				<li><a href="/home">Home</a></li>
-				<li><a href="/type-of-registration">Type of registration</a></li>
-				<li><a href="/title-number">Add title number</a></li>
-				<li><a href="/add-application-dropdown2">Add application dropdown 2</a></li>
-				<li><a href="/review-application">Review application</a></li>
-				<li><a href="/add-another-application-dropdown2">Add another application</a></li>
-				<li><a href="/lender-details">Lender details</a></li>
-				<li><a href="/review-application-copy">Review second application</a></li>
-				<li><a href="/add-applicant-details">Add applicant details</a></li>
-				<li><a href="/review-applicant-details">Review applicant details</a></li>
-				<li><a href="/acting-conveyancer-applicant">
-				Acting conveyancer applicant</a></li>
-				<li><a href="/add-docs">Add documents</a></li>
-				<li><a href="/review-all">Review all</a></li>
-				<li><a href="/save-as-draft">Save as draft</a></li>
-				<li><a href="/receipt">Application accepted</a></li>
+		<h2 class="heading-medium">Choose which type of registration you require</h2>
 
-			</ul>
+<div class="form-group">
+  <fieldset>
 
-      		<h2 class="heading-medium">Other resources</h2>
+    <div class="multiple-choice">
+      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+      <label for="radio-1">Document registration</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+      <label for="radio-2">Lease extension</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+      <label for="radio-3">New lease</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-4" type="radio" name="radio-group" value="Northern Ireland">
+      <label for="radio-4">Transfer of part</label>
+    </div>
+    <div class="multiple-choice">
+      <input id="radio-5" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+      <label for="radio-5">Removal of default form A restriction (JP1)</label>
+    </div>
 
-			<ul class="list list-bullet">
-				<li>
-					<a href="https://govuk-elements.herokuapp.com/snippets/">
-						Guide to GOV.UK Elements
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/service-manual">
-						Service design manual
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/design-principles">
-						Government Digital Service Design Principles
-					</a>
-				</li>
-			</ul>
+  </fieldset>
+</div>
+
+
+<a href="/title-number">
+<input class="button" type="submit" value="Save and continue">      
+</a>
 
     </div>
   </div>

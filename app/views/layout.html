@@ -4,17 +4,13 @@
   {% include "includes/head.html" %}
 {% endblock %}
 
-{% block cookie_message %}
-  <p>{{cookieText | safe }}</p>
-{% endblock %}
-
 {% block proposition_header %}
 
   <div class="header-proposition">
     <div class="content">
       <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
       <nav id="proposition-menu">
-        <a href="/" id="proposition-name">
+        <a href="/contents" id="proposition-name">
           {# Set serviceName in config.js. Use a block to override on a page. #}
           {% block service_name %}
             {% if serviceName %} {{ serviceName }} {% endif %}
@@ -35,6 +31,8 @@
 {% block header_class %}
   with-proposition
 {% endblock %}
+
+{% include "includes/phase_banner.html" %}
 
 {% block footer_support_links %}
   {% if useAutoStoreData %}
