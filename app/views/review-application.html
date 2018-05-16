@@ -7,11 +7,11 @@
 {% block content %}
 
 <style>
-#sortable {list-style-type: none; margin-left: : 10px; padding: 0; width: 100%;}
+#sortable {list-style-type: none; margin-left: 10px; padding: 0; width: 100%;}
 #sortable li {}
-#sortable li span {position:}
 
 /*.upload-btn-wrapper {
+#sortable li span {position:}
   position: relative;
   overflow: hidden;
   display: inline-block;
@@ -56,7 +56,7 @@
  		<ol>
       <li class="" style="float: left;"><a href="/home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
       <li class="" style="float: left;"><a href="/index">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
-      <li>Review application</li>
+      <li>Review Transaction</li>
  		</ol>
  		
  	</div>
@@ -74,11 +74,28 @@
 
     <p>Remember, restrictions in deeds may apply to other deeds of lower priority, unless you specify otherwise.</p>
 
+    <table style="margin-bottom: 30px;">
+      <thead>
+        <tr>
+          <th scope="col" style="font-size: medium;">Fees</th>
+          <th style="font-size: medium" class="numeric">Amount</th>
+          <th></th>             
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="col">Fees paid</td>
+          <td class="numeric">£40.00</td>
+          <td scope="col" style="text-align: right;"><a href="/add-application-dropdown2">Change</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 class="heading-small" style="margin-bottom: 20px;">Transaction(s)</h2>
 
 <table style="margin-bottom: 30px;">
   <thead>
     <tr>
-      <th scope="col" style="font-size: medium;">Application type</th>
+      <th scope="col" style="font-size: medium;">Transaction type</th>
       <th class="numeric" scope="col" style="font-size: medium;">Value or price paid</th>
       <th class="numeric" scope="col" style="font-size: medium;">Fees paid</th>
       <th></th>
@@ -88,17 +105,15 @@
   <ul id="sortable">
   <tbody>
     <tr>
-      <th scope="row">Transfer</th>
+      <td scope="row">Transfer</th>
       <td class="numeric">£125,000</td>
-      <td class="numeric">£40.00</td>
-      <td scope="row" style="text-align: right;"><a href="/add-application-dropdown2">Change</a></td>
-      <!--td scope="row" style="color: red;">&#10005;</td-->
+      <td scope="col" style="text-align: right;"><a href="/add-application-dropdown2">Change</a></td>
     </tr>
   </tbody>
   </ul>
 </table>
 
-<h2 class="heading-small" style="margin-bottom: 20px;">Do you want to add another application?</h2>
+<h2 class="heading-small" style="margin-bottom: 20px;">Do you want to add another transaction?</h2>
 
 <div class="form-group">
   <form action="" onsubmit="return doSubmit(this)">

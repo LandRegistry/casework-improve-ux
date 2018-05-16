@@ -7,9 +7,8 @@
 {% block content %}
 
 <style>
-#sortable {list-style-type: none; margin-left: : 10px; padding: 0; width: 100%;}
+#sortable {list-style-type: none; margin-left: 10px; padding: 0; width: 100%;}
 #sortable li {}
-#sortable li span {position:}
 
 /*.upload-btn-wrapper {
   position: relative;
@@ -72,17 +71,33 @@
 
 		<h2 class="heading-medium" style="margin-top: 15px;">Review application</h2>
 
-    <h2 class="heading-small">Application</h2>
-
     <p>Remember, restrictions in deeds may apply to other deeds of lower priority, unless you specify otherwise.</p>
 
 
+    <table style="margin-bottom: 30px;">
+        <thead>
+          <tr>
+            <th scope="col" style="font-size: medium;">Fees</th>
+            <th style="font-size: medium" class="numeric">Amount</th>
+            <th></th>             
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td scope="col">Fees paid</td>
+            <td class="numeric">£40.00</td>
+            <td scope="col" style="text-align: right;"><a href="/add-application-dropdown2">Change</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="heading-small" style="margin-bottom: 20px;">Transaction(s)</h2>
+  
+  
 <table style="margin-bottom: 30px;">
   <thead>
     <tr>
-      <th scope="col" style="font-size: medium;">Application type</th>
+      <th scope="col" style="font-size: medium;">Transaction type</th>
       <th class="numeric" scope="col" style="font-size: medium;">Value or price paid</th>
-      <th class="numeric" scope="col" style="font-size: medium;">Fees paid</th>
       <th></th>
       <th></th>
     </tr>
@@ -92,28 +107,11 @@
     <tr>
       <th scope="row">Transfer</th>
       <td class="numeric">£125,000</td>
-      <td class="numeric">£40.00</td>
       <td scope="row" style="text-align: right;"><a href="/add-application-dropdown2">Change</a></td>
-      <!--td scope="row" style="color: red;">&#10005;</td-->
     </tr>
   </tbody>
   </ul>
 </table>
-
-<!--h2 class="heading-small" style="margin-bottom: 20px;">Do you want to add another application?</h2>
-
-<div class="form-group">
-  <form action="" onsubmit="return doSubmit(this)">
-    <fieldset>
-      <div class="multiple-choice">
-        <input id="radio-2" type="radio" name="radio-group" value="/add-applicant-details" checked="checked" required="">
-        <label for="radio-2">No</label>
-      </div>
-      <div class="multiple-choice">
-        <input id="radio-1" type="radio" name="radio-group" value="/add-another-application-dropdown2" required>
-        <label for="radio-1">Yes</label>
-      </div>
-    </fieldset-->
 
 <h2 class="heading-small">Applicant</h2>
 
@@ -134,7 +132,7 @@
       <td class="numeric">A private individual</td>
       <td class="numeric">8 Some Street,
       PL1 1AA</td>
-      <td scope="row" style="text-align: right;"><a href="">Change</a></td>
+      <td scope="row" style="text-align: right;"><a href="/add-applicant-details">Change</a></td>
       <!--td scope="row" style="color: red;">&#10005;</td-->
     </tr>
   </tbody>
@@ -147,12 +145,12 @@
   <fieldset>
 
     <div class="multiple-choice">
-      <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands" checked="checked">
+      <input id="radio-2" type="radio" name="radio-group" value="No" checked="checked">
       <label for="radio-2">No</label>
     </div>
 
     <div class="multiple-choice">
-      <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+      <input id="radio-1" disabled type="radio" name="radio-group" value="Yes">
       <label for="radio-1">Yes</label>
     </div>
 
