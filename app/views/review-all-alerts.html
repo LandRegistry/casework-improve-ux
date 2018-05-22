@@ -1,0 +1,248 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+
+/*.display-none {
+  display: none;
+}*/ 
+
+.alert {
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.alert.info {
+  background-color: #FFFFFF;
+  border: 3px solid #005EA5
+}
+
+.confirmation {
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+.confirmation.info {
+  background-color: #28A197;
+  border: 3px solid #28A197
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: white;
+  background-color: gray;
+  padding: 5px 15px;
+  border-radius: 0px;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+</style>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">BETA</strong>
+    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
+  </p>
+</div>
+
+ 	<div class="gobreadcrumb" style="margin-top: 20px">
+
+ 		<ol >
+ 			<li class="" style="float: left;"><a href="/home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li class="" style="float: left;"><a href="">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+ 			<li>Review your application</li>
+ 		</ol>
+ 		
+ 	</div>
+
+ 	<div style="clear: left;"></div>
+  <div style="clear: left;"></div>
+
+  <div style="margin-top: 40px;"></div>
+
+<form id="draft" class="hidden" method="post" action="where-you-want-to-post/journal">
+  <div class="alert info">
+    <p style="margin-left: 10px; margin-top: 10px; margin-bottom: 10px;"><span style="font-weight: bold;">Draft application</span><br>Your application has been saved as a draft.</p>
+    <p style="margin-left: 10px; margin-top: 10px; margin-bottom: 10px;"><a href="">Print a copy of the application</a></p>
+</div>
+</form>
+
+<form id="submit" class="hidden" method="post" action="where-you-want-to-post/journal">
+  <div class="confirmation info">
+    <p style="margin-left: 10px; margin-top: 10px; margin-bottom: 10px;color: white;"><span style="font-weight: bold; color: white;">Application accepted</span><br>You must quote the reference below each time you contact us about this application.</p>
+    <table style="width: 60%; margin-left: 10px;">
+      <tbody>
+        <tr>
+          <td style="font-size: medium; font-weight: bold; border-color: #28A197; color: white;">Reference</td>
+          <td style="font-size: medium; border-color: #28A197; color: white;">A123BCD</td>
+        </tr>
+        <tr>
+          <td style="font-size: medium; font-weight: bold; border-color: #28A197; color: white;">Date</td>
+          <td style="font-size: medium; border-color: #28A197; color: white;">02 March 2018</td>
+        </tr>
+        <tr>
+          <td style="font-size: medium; font-weight: bold; border-color: #28A197; color: white;">Time</td>
+          <td style="font-size: medium; border-color: #28A197; color: white;">16:14:27</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-left: 10px; margin-top: 10px; margin-bottom: 10px;"><a href="" style="color: white;">Print a copy of the application</a></p>
+</div>
+</form>
+
+
+<h1 class="heading-large">
+  Application to change the register
+</h1>
+
+<hr>
+
+<h2 class="heading-medium">Review your application</h2>
+
+<div style="background-color: #e6e6e6; height: 40px;">
+  <h2 class="heading-small" style="padding-top: 10px; padding-left: 5px;">Application</h2>
+</div>  
+
+<table>
+  <tbody>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Application type</td>
+      <td style="font-size: medium;">Transfer</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Application applies to</td>
+      <td style="font-size: medium;">Part of the title</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Which part of the title</td>
+      <td style="font-size: medium;">The part edged red on the plan</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Value or price paid</td>
+      <td style="font-size: medium;">£125,000</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Fees paid</td>
+      <td style="font-size: medium;">£40.00</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin-top: 40px"></div>
+
+<div style="background-color: #e6e6e6; height: 40px;">
+  <h2 class="heading-small" style="padding-top: 10px; padding-left: 5px;">Applicant</h2>
+</div>
+<table>
+  <tbody>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Applicant's name</td>
+      <td style="font-size: medium;">A Name</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Applicant's type</td>
+      <td style="font-size: medium;">A private individual</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Applicant's service address</td>
+      <td style="font-size: medium;">8 Some Street, Some Place, PL1 1AA</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Applicant represented by</td>
+      <td style="font-size: medium;">Acme Conveyancers Ltd</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin-top: 40px"></div>
+
+<div style="background-color: #e6e6e6; height: 40px;">
+  <h2 class="heading-small" style="padding-top: 10px; padding-left: 5px;">Documents lodged with this application</h2>
+</div>
+<table>
+  <tbody>
+    <tr>
+      <td style="font-size: medium; font-weight: bold;">Document name</td>
+      <td style="font-size: medium;">Transfer of part.pdf</td>
+      <td style="text-align: right; font-size: medium;"><a href="../index.html">Change</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+<h2 class="heading-medium">Send your application</h2>
+
+<p>By submitting this application you're confirming that, to the best of your knowledge, the details you're providing are correct.</p>
+
+<!--div class="form-group" style="float: left; margin-top: 10px;">
+  
+  <a href="javascript:unhide('submit', 'draft')" class="button">Submit</a>
+  <a href="javascript:unhide('draft', 'submit')" class="btn" style="color: white; text-decoration: none;">Save as draft</a>
+
+</div>
+
+<div style="clear: left;"></div-->
+
+<div class="form-group" style="float: left;">
+  <p style="padding-top:20px" >
+    <a href="javascript:unhide('submit', 'draft')" class="button" style="margin-top: -8px;">Submit</a>
+    <a href="javascript:unhide('draft', 'submit')" class="btn" style="color: white; text-decoration: none; margin-left: 10px;">Save as draft</a>
+  </p>
+</div>
+
+<div style="clear: left;"></div>
+
+</div>
+
+</div>
+</main>
+
+<script type="text/javascript">
+    function unhide(divID, otherDivId) {
+    var item = document.getElementById(divID);
+    if (item) {
+            item.className=(item.className=='hidden')?'unhidden':'hidden';
+        }
+        document.getElementById(otherDivId).className = 'hidden';
+    }
+</script>
+
+{% endblock %}
+
+
