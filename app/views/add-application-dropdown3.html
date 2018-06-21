@@ -13,11 +13,125 @@
 {% block content %}
 
 <style>
-  .display-none {
+
+/*===== Vertical Timeline =====*/
+#conference-timeline {
+  position: relative;
+  max-width: auto;
+  width: 100%;
+  align-items: left;
+  margin-left: 0px;
+
+}
+
+#conference-timeline .conference-center-line {
+  position: absolute;
+  width: 1px;
+  height: 90%;
+  top: 0;
+  bottom: 0px;
+  left: 16px;
+  margin-left: -1px;
+  background: black;
+
+}
+#conference-timeline .conference-timeline-content {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.timeline-article {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.timeline-article .content-right-container {
+  max-width: 87%;
+  width: 100%;
+  margin-left: -20px;
+}
+
+
+.timeline-article .content-right {
+  position: relative;
+  width: 100%;
+  padding: 0px 10px;
+}
+.timeline-article p {
+  margin: 0 0 0 10;
+  padding: 0 0 0 0;
+  font-weight: 400;
+  color: #242424;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+}
+
+.timeline-article .content-complete {
+  margin: 0 0 0 10;
+  padding: 0 0 0 0;
+  font-weight: 400;
+  color: #242424;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  position: relative;
+}
+
+.timeline-article .content-right-container {
+  float: right;
+}
+
+.timeline-article .content-right:before{
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: 20px;
+  font-size: 23px;
+  color: #fff;
+}
+
+.timeline-article .meta-date {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  width: 30px;
+  height: 30px;
+  margin-left: -16px;
+  border-radius: 100%;
+  border: 1px solid #BFC1C3;
+  background: #FFF;
+}
+
+.timeline-article .meta-date .date {
+  display: block;
+  text-align: center;
+  font-weight: 900;
+  color: #BFC1C3;
+
+}
+.timeline-article .meta-date .date {
+  font-size: 14px;
+  line-height: 30px;
+
+}
+
+/*===== // Vertical Timeline =====*/
+
+.section-heading {
+  float: left;
+  padding: 5px 30px;
+
+}
+
+.display-none {
     display: none;
   }
 
-  .alert {
+.alert {
     padding: 0px;
     margin-bottom: 0px;
 }
@@ -31,43 +145,38 @@
 
 <main id="content" role="main">
   <div class="grid-row">
-    <div class="column-two-thirds">
+  <div class="column-full">
+    <div class="gobreadcrumb" style="margin-top: 20px">
 
-  <div class="phase-banner">
-  <p>
-    <strong class="phase-tag">BETA</strong>
-    <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-  </p>
-</div>
+    <ol >
+      <li class="" style="float: left;"><a href="/home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+      <li class="" style="float: left;"><a href="/index">AP1</a></li>
+    </ol>
+    
+  </div>
 
- 	<div class="gobreadcrumb" style="margin-top: 20px">
-
- 		<ol >
- 			<li class="" style="float: left;"><a href="home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
- 			<li class="" style="float: left;"><a href="">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
- 			<li>Add an application</li>
- 		</ol>
- 		
- 	</div>
-
- 	<div style="clear: left;"></div>
   <div style="clear: left;"></div>
-
-<div style="margin-top: 40px;"></div>
-
-<form id="error" class="display-none" method="post" action="where-you-want-to-post/journal">
-  <div class="alert info">
-    <p style="margin-left: 10px; margin-top: 10px; margin-bottom: 10px;"><span style="font-weight: bold;">Discharge</span><br>This item is not available as it's currently being worked on.<br><a href="">Learn more</a></p>
-</div>
-</form>
+  <div style="clear: left;"></div>
 
       <h1 class="heading-large">
         Application to change the register
       </h1>
 
-      <hr>
+<form id="error" class="display-none" method="post" action="where-you-want-to-post/journal">
+<div class="alert info">
+  <p style="margin-left: 10px; margin-top: 10px; margin-bottom: 10px;"><span style="font-weight: bold;">Discharge</span><br>This item is not available as it's currently being worked on.<br><a href="">Learn more</a></p>
+</div>
+</form>
 
-		<h2 class="heading-medium">Add an application</h2>
+</div>
+
+<div class="column-two-thirds">
+
+<div style="margin-top: 30px;"></div>
+
+<hr>
+
+<h2 class="heading-medium">Add an application</h2>
 
     <div class="form-group">
   <label class="form-label" for="select-box" style="font-weight: bold; font-size: 14pt;">Choose an application</label>
@@ -170,23 +279,94 @@
 
 </div>
 
-<!--div class="column-one-third" style="float: right; margin-top: -25px;">
-
-    <h2 class="heading-medium">Documents lodged with this application</h2>
+<div class="column-one-third">
     
-    <p>Documents lodged with this form ned to be uploaded. We only need certified copies of deeds or documents. Once we have made a copy of the documents you send to us, they will be destroyed. This applies to both originals and certified copies.</p>  
+  <hr style="height: 3px; border: none; color: #005EA5; background-color: #005EA5;">
 
-  <div class="form-group">
-  <label class="form-label" for="file-input">
-    Upload a file
-  </label>
-  <input type="file" id="file-input">
-</div>
+<section id="conference-timeline">
 
-<div style="clear: right;"></div>
+    <div class="conference-center-line"></div>
+    <div class="conference-timeline-content">
+      <!-- Article -->
+      <div class="timeline-article">
+        <div class="content-right-container">
+          <div class="content-right">
+            <p class="content-complete">Add title number</p>
+          </div>
 
+        </div>
+        <div class="meta-date" style="border: 1px solid #0B0C0C;">
+          <span class="date" style="color: #0B0C0C;">1</span>
 
-</div-->
+        </div>
+      </div>
+      <!-- // Article -->
+      
+      <!-- Article -->
+      <div class="timeline-article">
+
+        <div class="content-right-container">
+          <div class="content-right">
+            <p class="content-complete">Choose an application type</p>
+          </div>
+
+        </div>
+        <div class="meta-date" style="border: 1px solid #0B0C0C;">
+          <span class="date" style="color: #0B0C0C;">2</span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+
+      <!-- Article -->
+      <div class="timeline-article">
+        <div class="content-right-container">
+          <div class="content-right">
+            <p>Add applicant details</p>
+          </div>
+
+        </div>
+        <div class="meta-date">
+          <span class="date">3</span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+
+      <!-- Article -->
+      <div class="timeline-article">
+        <div class="content-right-container">
+          <div class="content-right">
+            <p>Upload documents</p>
+          </div>
+
+        </div>
+        <div class="meta-date">
+          <span class="date">4</span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+
+      <!-- Article -->
+      <div class="timeline-article">
+        <div class="content-right-container">
+          <div class="content-right">
+            <p>Submit your application</p>
+          </div>
+
+        </div>
+        <div class="meta-date">
+          <span class="date">5</span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+      
+    </div>
+
+  </section>
+
 </div>
 
 </main>
