@@ -1,0 +1,156 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+
+.tile {
+  width: 100%;
+  height: 170px
+}
+
+.data-item {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 150px;
+}
+
+.data-item p {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: -110px;
+}
+
+table th {
+  font-size: medium;
+}
+
+table td {
+  font-size: medium;
+}
+
+</style>
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+  <div class="column-full">
+    <div class="gobreadcrumb" style="margin-top: 20px">
+
+    <ol >
+      <li class="" style="float: left;"><a href="/home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
+      <li class="" style="float: left;"><a href="/index">AP1</a></li>
+    </ol>
+    
+  </div>
+
+  <div style="clear: left;"></div>
+  <div style="clear: left;"></div>
+
+  <h1 class="heading-large">
+    Application to change the register
+  </h1>
+
+</div>
+
+
+  <div class="column-one-third">
+    <div class="tile" style="background: #D53880;">
+      <div class="data-item">5
+      <br>
+      <p class="">In progress</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column-one-third">
+    <div class="tile" style="background: #28A197;">
+      <div class="data-item">16
+      <br>
+      <p class="">Completed</p>
+      </div>
+    </div>
+  </div>
+
+<a href="/title-number2">
+  <div class="column-one-third">
+    <div class="tile" style="background: #BFC1C3;">
+      <div class="data-item"><span>&#10133;</span>
+      <br>
+      <p class="">Add new application</p>
+      </div>
+    </div>
+  </div>
+</a>
+
+ <div class="column-full">
+
+<hr style="height: 3px; border: none; color: #BFC1C3; background-color: #BFC1C3;">
+
+<!--h2 class="heading-small" style="margin-bottom: 20px;">List of applications that have been completed or are in progress</h2-->
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Title number</th>
+      <th class="numeric" scope="col">Address</th>
+      <th class="numeric" scope="col">Application type</th>
+      <th class="numeric" scope="col">Status</th>
+      <th class="numeric" scope="col"></th>
+      <th class="numeric" scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">123456789</th>
+      <td class="numeric">8 Somewhere St, Someplace, Someshire</td>
+      <td class="numeric">Transfer</td>
+      <td class="numeric">Completed</td>
+      <td></td>
+      <td style="font-size: medium;"><a href="/review-all-complete">View</a></td>
+    </tr>
+    <tr>
+      <th scope="row">123456789</th>
+      <td class="numeric">8 Somewhere St, Someplace, Someshire</td>
+      <td class="numeric">Charge</td>
+      <td class="numeric">In progress</td>
+      <td></td>
+      <td style="font-size: medium;"><a href="/review-all-alerts">View</a></td>
+    </tr>
+    <tr>
+      <th scope="row">123456789</th>
+      <td class="numeric">8 Somewhere St, Someplace, Someshire</td>
+      <td class="numeric">Transfer</td>
+      <td class="numeric">Completed</td>
+      <td></td>
+      <td style="font-size: medium;"><a href="../index.html">View</a></td>
+    </tr>
+    <tr>
+      <th scope="row">123456789</th>
+      <td class="numeric">8 Somewhere St, Someplace, Someshire</td>
+      <td class="numeric">Charge</td>
+      <td class="numeric">In progress</td>
+      <td></td>
+      <td style="font-size: medium;"><a href="../index.html">View</a></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</main>
+
+<script>
+
+</script>
+
+{% endblock %}
+
+

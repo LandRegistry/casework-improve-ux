@@ -6,16 +6,126 @@
 
 {% block content %}
 
+<style>
+
+/*===== Vertical Timeline =====*/
+#conference-timeline {
+  position: relative;
+  max-width: auto;
+  width: 100%;
+  align-items: left;
+  margin-left: 0px;
+
+}
+
+#conference-timeline .conference-center-line {
+  position: absolute;
+  width: 1px;
+  height: 90%;
+  top: 0;
+  bottom: 0px;
+  left: 16px;
+  margin-left: -1px;
+  background: black;
+
+}
+#conference-timeline .conference-timeline-content {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.timeline-article {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.timeline-article .content-right-container {
+  max-width: 87%;
+  width: 100%;
+  margin-left: -20px;
+}
+
+
+.timeline-article .content-right {
+  position: relative;
+  width: 100%;
+  padding: 0px 10px;
+}
+.timeline-article p {
+  margin: 0 0 0 10;
+  padding: 0 0 0 0;
+  font-weight: 400;
+  color: #242424;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+}
+
+.timeline-article .content-complete {
+  margin: 0 0 0 10;
+  padding: 0 0 0 0;
+  font-weight: 400;
+  color: #242424;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  position: relative;
+}
+
+.timeline-article .content-right-container {
+  float: right;
+}
+
+.timeline-article .content-right:before{
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: 20px;
+  font-size: 23px;
+  color: #fff;
+}
+
+.timeline-article .meta-date {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  width: 30px;
+  height: 30px;
+  margin-left: -16px;
+  border-radius: 100%;
+  border: 1px solid #BFC1C3;
+  background: #FFF;
+}
+
+.timeline-article .meta-date .date {
+  display: block;
+  text-align: center;
+  font-weight: 900;
+  color: #BFC1C3;
+
+}
+.timeline-article .meta-date .date {
+  font-size: 14px;
+  line-height: 30px;
+
+}
+
+/*===== // Vertical Timeline =====*/
+
+</style>
+
 <main id="content" role="main">
   <div class="grid-row">
-    <div class="column-two-thirds">
+    <div class="column-full">
 
  	<div class="gobreadcrumb" style="margin-top: 20px">
 
  		<ol >
       <li class="" style="float: left;"><a href="/home">Home</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
-      <li class="" style="float: left;"><a href="/index">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px">&#62;</span></li>
-      <li>Add applicant details</li>
+      <li class="" style="float: left;"><a href="/index">AP1</a><span style="color: #cccccc; padding: 0 10px 0 10px"></span></li>
  		</ol>
  		
  	</div>
@@ -26,6 +136,10 @@
       <h1 class="heading-large">
         Application to change the register
       </h1>
+
+    </div>
+
+    <div class="column-two-thirds">
 
       <hr>
 
@@ -107,12 +221,102 @@
   </fieldset>
 </div>
 
-<a href="/review-application-and-applicant">
+<a href="/acting-conveyancer-applicant">
 <input class="button" type="submit" value="Save and continue"> 
 </a>     
 
     </div>
-  </div>
+
+    <div class="column-one-third">
+
+<hr style="height: 3px; border: none; color: #005EA5; background-color: #005EA5;">
+
+<section id="conference-timeline">
+
+    <div class="conference-center-line"></div>
+    <div class="conference-timeline-content">
+      <!-- Article -->
+      <div class="timeline-article">
+        <div class="content-right-container">
+          <div class="content-right">
+            <p class="content-complete">Add title number</p>
+          </div>
+
+        </div>
+        <div class="meta-date" style="border: 1px solid #0B0C0C;">
+          <span class="date" style="color: #0B0C0C;">1</span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+      
+      <!-- Article -->
+      <div class="timeline-article">
+
+        <div class="content-right-container">
+          <div class="content-right">
+            <p class="content-complete">Choose an application type</p>
+          </div>
+
+        </div>
+        <div class="meta-date" style="border: 1px solid #0B0C0C;">
+          <span class="date" style="color: #0B0C0C;">2</span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+
+      <!-- Article -->
+      <div class="timeline-article">
+        <div class="content-right-container">
+          <div class="content-right">
+            <p class="content-complete">Add applicant details</p>
+          </div>
+
+        </div>
+        <div class="meta-date" style="border: 1px solid #0B0C0C;">
+          <span class="date" style="color: #0B0C0C;">3</span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+
+      <!-- Article -->
+      <div class="timeline-article">
+        <div class="content-right-container">
+          <div class="content-right">
+            <p>Upload documents</p>
+          </div>
+
+        </div>
+        <div class="meta-date">
+          <span class="date">4</span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+
+      <!-- Article -->
+      <div class="timeline-article">
+        <div class="content-right-container">
+          <div class="content-right">
+            <p>Submit your application</p>
+          </div>
+
+        </div>
+        <div class="meta-date">
+          <span class="date">5</span>
+
+        </div>
+      </div>
+      <!-- // Article -->
+      
+    </div>
+
+  </section>
+
+</div>
+</div>
 </main>
 
 {% endblock %}
